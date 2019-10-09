@@ -78,15 +78,8 @@ public class Triangle {
                 "; Угoл c : " + String.format("%6.2f", getDegreesToC());
     }
 
-    public void getMaxSquare(ArrayList<Triangle> triangles) {
-        double max = triangles.get(0).getSquare();
-        for (Triangle i : triangles) {
-            if (i.getSquare() > max) {
-                max = i.getSquare();
-            }
-        }
-        System.out.println(" Найбольшая площадь  среди треугольников : " + String.format(FORMAT, max));
-    }
+
+
 
     public void chek2(double a, double b, double c) {
         if ((a + b) < c) {

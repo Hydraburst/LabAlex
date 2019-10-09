@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /*Класс прямоугольный треугольник который включает в себя функцию проверки: "является ли данный треугольник прямоугольным",
 функцию поиска наименьшой гипотенузы треугольника, метод вывода параметров прямоугольного треугольника (стороны, углы и т.д.).
 Данный класс является дочерним классом Треугольник, т.е. он наследует методы класса Треугольник */
@@ -36,8 +34,8 @@ public class WriteTriangle extends Triangle {
     }
 
     public String toString() {
-        return "Сторона прямоугольного  треуглольника А = " + String.format("%6.2f", getA())+
-                "; Сторона прямоугольного треуглольника В = " +String.format("%6.2f", getB()) +
+        return "Сторона прямоугольного  треуглольника А = " + String.format("%6.2f", getA()) +
+                "; Сторона прямоугольного треуглольника В = " + String.format("%6.2f", getB()) +
                 "; Сторона прямоугольного треуглольника С = " + String.format("%6.2f", getC()) +
                 "; Периметр прямоугольного треугольника = " + String.format("%6.2f", getPerimetr()) +
                 "; Площадь прямоугольного треугольника = " + String.format("%6.2f", getSquare()) +
@@ -51,14 +49,5 @@ public class WriteTriangle extends Triangle {
             throw new IllegalArgumentException("Треугольник не являеться прямоугольным, проверьте правильность вводимых данных , Квадрат гипотенузы должен равняться квадрату суммы катетов !");
         }
     }
-
-    public void getMinC(ArrayList<WriteTriangle> writeTriangles) {
-        double min = writeTriangles.get(0).getC();
-        for (Triangle i : writeTriangles) {
-            if (i.getC() < min) {
-                min = i.getC();
-            }
-        }
-        System.out.println(" Наймешная гипотенуза среди прямоугольных треугольников  : " + String.format(FORMAT, min));
-    }
 }
+
